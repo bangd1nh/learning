@@ -10,7 +10,18 @@ addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
         document.querySelector("#guess").click();
     }
+    if (e.key === "Escape") {
+        document.querySelector("#again").click();
+    }
 });
+
+document
+    .querySelector("#guess-number")
+    .addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            document.querySelector("#again").click();
+        }
+    });
 
 const displayGuessing = function (guessing) {
     document.querySelector(".guessing").textContent = guessing;
