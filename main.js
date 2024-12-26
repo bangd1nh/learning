@@ -6,6 +6,12 @@ let score = 5;
 
 let highScore = 0;
 
+addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        document.querySelector("#guess").click();
+    }
+});
+
 const displayGuessing = function (guessing) {
     document.querySelector(".guessing").textContent = guessing;
 };
@@ -33,6 +39,8 @@ document.querySelector("#guess").addEventListener("click", function () {
     if (score >= 1) {
         if (!guess) {
             displayGuessing("there is no nummber!");
+        } else if (guess < 1 || guess > 20) {
+            displayGuessing("Enter number between 1 and 20");
         } else if (guess === correctNumber) {
             displayGuessing("Correct number ");
             document.querySelector("body").style.backgroundColor = "#60b347";
