@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangdinh games</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="button" id="again">Again!</button>
+    <div class="header">
+      <p class="header__p">(Between 1 and 20)</p>
+      <h1 class="header__title">Guess My Number!</h1>
+    </div>
+    <div class="score-box">
+      <h1 class="score" id="number">?</h1>
+    </div>
+    <div class="container">
+      <div class="left">
+        <input type="number" class="input-guess" id="guess-number" />
+        <button class="button__guess" id="guess">guess</button>
+      </div>
+      <div class="right">
+        <h1 class="guessing">Start guessing ...</h1>
+        <div>
+          <div class="a">
+            <p class="player-score">Attemp:</p>
+            <p class="player-score score-num" id="current-score">5</p>
+          </div>
+          <div>
+            <p class="player-score">High Score:</p>
+            <p class="player-score score-num" id="high-score">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
